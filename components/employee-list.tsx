@@ -48,7 +48,7 @@ export function EmployeeList({ employees, onViewProfile }: EmployeeListProps) {
   return (
     <div className="grid gap-4">
       {employees.map((employee) => (
-        <Card key={employee.id} className="shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.01]">
+        <Card key={`${employee.id}-${employee.role}`} className="shadow-md hover:shadow-lg transition-all duration-200 hover:scale-[1.01]">
           <CardContent className="p-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4 flex-1">
